@@ -30,7 +30,7 @@ const Register = () => {
         </div>
 
         {/* form */}
-        <div className=" w-[469.5px] h-[282px] text-sm font-medium mb-40">
+        <div className=" w-[469.5px] h-[282px] text-sm font-medium mb-32">
           {/* name */}
           <div className=" flex justify-between gap-4 ">
             <div className="mb-5">
