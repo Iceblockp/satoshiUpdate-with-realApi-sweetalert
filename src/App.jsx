@@ -6,8 +6,8 @@ import Register from "./components/Register";
 const App = () => {
   return (
     <Container>
-      {/* <Login /> */}
-      <Register />
+      <Login />
+      {/* <Register /> */}
     </Container>
   );
 };

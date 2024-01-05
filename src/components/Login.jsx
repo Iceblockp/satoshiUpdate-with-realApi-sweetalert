@@ -2,7 +2,7 @@ import React from "react";
 
 const Login = () => {
   return (
-    <div className=" bg-white flex">
+    <div className=" bg-white flex h-screen">
       <div className="mx-auto px-10 md:px-0 py-10">
         {/* heading */}
         <div className=" mb-10">
@@ -30,7 +30,7 @@ const Login = () => {
         </div>
 
         {/* form */}
-        <div className=" w-[469.5px] h-[282px] text-sm font-medium">
+        <div className=" md:w-[469.5px] md:h-[282px] text-sm font-medium">
           {/* email */}
           <div className="mb-5">
             <label className="" htmlFor="email">
