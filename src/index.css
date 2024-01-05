@@ -12,3 +12,33 @@
   flex: 0 0 100%;
   min-width: 0;
 }
+
+.purple {
+  color: #8957ff;
+}
+.purple:hover {
+  color: #c6aeff;
+}
+.purpleBg {
+  color: #523499;
+}
+
+.border {
+  color: #343a40;
+}
+.green {
+  color: #0c8;
+}
+.red {
+  color: #f36;
+}
+.orange {
+  color: #ff8c00;
+}
+
+.bgColor {
+  color: #0f172a;
+}
+.bgColor:hover {
+  color: #334155;
+}
