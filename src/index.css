@@ -14,31 +14,45 @@
 }
 
 .purple {
-  color: #8957ff;
+  background-color: #8957ff;
 }
 .purple:hover {
-  color: #c6aeff;
+  background-color: #c6aeff;
 }
 .purpleBg {
-  color: #523499;
+  background-color: #523499;
 }
 
-.border {
-  color: #343a40;
+.borderColor {
+  border-color: #334155;
+  border-width: 0.8px;
+  border-radius: 12px;
 }
 .green {
-  color: #0c8;
+  background-color: #0c8;
 }
 .red {
-  color: #f36;
+  background-color: #f36;
 }
 .orange {
   color: #ff8c00;
 }
 
 .bgColor {
-  color: #0f172a;
+  background-color: #0f172a;
 }
-.bgColor:hover {
-  color: #334155;
+.btnColor:hover {
+  background-color: #334155;
+}
+.textColor {
+  color: rgb(203, 213, 225);
+}
+.btnBg {
+  background-color: rgba(30, 41, 59, 0.75);
+}
+.btnBg:hover {
+  background-color: rgba(30, 41, 59, 1);
+}
+.chartjs-hidden-iframe {
+  display: none;
 }
