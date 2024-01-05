@@ -84,7 +84,7 @@ const Login = () => {
 
         {/* logo icon */}
         <div className=" flex justify-center gap-2 ">
-          <div className=" border border-slate-300 px-3 py-2 rounded-md w-full">
+          <div className=" border border-slate-300 px-3 py-2 rounded-md w-full hover:bg-slate-100">
             <a href="">
               <span className=" flex gap-4 justify-center items-center">
                 <img
@@ -96,7 +96,7 @@ const Login = () => {
               </span>
             </a>
           </div>
-          <div className=" border border-slate-300 px-3 py-2 rounded-md w-full">
+          <div className=" border border-slate-300 px-3 py-2 rounded-md w-full hover:bg-slate-100">
             <a href="">
               <span className=" flex gap-4 justify-center items-center">
                 <img
