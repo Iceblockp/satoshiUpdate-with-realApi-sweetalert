@@ -7,12 +7,14 @@ const TopDrawerContainer = ({draw}) => {
   return (
     <div
           
-          className={` py-[8px] lg:block relative lg:fixed overflow-auto w-full lg:w-[280px] top-0 left-0 z-20 bg-[rgb(23,32,51)] `}
+          className={` py-[8px] lg:block relative lg:fixed overflow-auto h-full w-full lg:w-[280px] top-0 left-0 z-20 bg-[rgb(23,32,51)] `}
         >
+           
           <div
-          style={{
-            transform: `${draw ? "translateY(-550px)  " : "translateY(0)"}`
-          }} className=" px-[24px] duration-500 ">
+        //    style={{
+        //     transform: `${draw ? "translateY(-550px)  " : "translateY(0)"}`
+        //   }} 
+          className={`${draw ? "translate-y-[-550px]":"translate-y-0"} lg:translate-y-0 px-[24px] duration-500`}>
             {/* inBar  */}
             <div className=" py-[4px] mb-[20px] hidden lg:block ">
               <img

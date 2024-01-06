@@ -128,10 +128,10 @@ const Container = ({ children }) => {
         <TopDrawerContainer draw={draw} />
 
         {/* second Middle  */}
-       <LeftDrawerContainer/>
+       {/* <LeftDrawerContainer/> */}
 
-        <div  className={` ${draw ? "mt-[-570px]":"mt-0"} duration-500 relative z-40 lg:overflow-auto border h-full lg:max-h-screen border-white flex-grow lg:rounded-tl-[1rem] rounded-t-[1rem] `}>
-          <div className=" h-auto mb-[70px] ">
+        <div  className={` ${draw ? "mt-[-550px]":"mt-0"} lg:mt-0 duration-500 relative z-40 lg:overflow-auto border h-full lg:max-h-screen border-white flex-grow lg:rounded-tl-[1rem] rounded-t-[1rem] `}>
+          <div className=" h-auto mb-[20px] ">
             {children}
           </div>
         </div>
