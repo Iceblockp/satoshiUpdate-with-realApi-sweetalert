@@ -1,5 +1,4 @@
 
-import React from "react";
 import React, { useState } from "react";
 import LeftDrawerContainer from "./LeftDrawerContainer";
 import TopDrawerContainer from "./TopDrawerContainer";
@@ -134,7 +133,7 @@ const Container = ({ children }) => {
         {/* second Middle  */}
        {/* <LeftDrawerContainer/> */}
 
-        <div  className={` ${draw ? "mt-[-550px]":"mt-0"} lg:mt-0 duration-500 relative z-40 lg:overflow-auto border h-full lg:max-h-screen border-white flex-grow lg:rounded-tl-[1rem] rounded-t-[1rem] `}>
+        <div  className={` ${draw ? "mt-[-550px]":"mt-0"} lg:mt-0 duration-500 relative z-40 lg:overflow-auto h-full lg:max-h-screen flex-grow lg:rounded-tl-[1rem] rounded-t-[1rem] borderColor `}>
           <div className=" h-auto mb-[70px] ">
             {children}
           </div>
