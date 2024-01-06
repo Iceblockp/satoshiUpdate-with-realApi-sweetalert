@@ -1,7 +1,10 @@
+
+import React from "react";
 import React, { useState } from "react";
 import LeftDrawerContainer from "./LeftDrawerContainer";
 import TopDrawerContainer from "./TopDrawerContainer";
 import { Link } from "react-router-dom";
+
 
 const Container = ({ children }) => {
   const [draw, setDraw] = useState(true);
@@ -135,6 +138,7 @@ const Container = ({ children }) => {
           <div className=" h-auto mb-[70px] ">
             {children}
           </div>
+
         </div>
       </div>
     </div>

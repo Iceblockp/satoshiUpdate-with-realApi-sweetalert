@@ -13,8 +13,62 @@
   min-width: 0;
 }
 
+
+.purple {
+  background-color: #8957ff;
+}
+.purple:hover {
+  background-color: #c6aeff;
+}
+.purpleBg {
+  background-color: #523499;
+}
+
+.borderColor {
+  border-color: #334155;
+  border-width: 0.8px;
+  border-radius: 12px;
+}
+.borderBcolor {
+  border-color: #334155;
+  border-width: 0 0 0.8px 0;
+}
+.green {
+  color: #0c8;
+}
+.red {
+  color: #f36;
+}
+.orange {
+  color: #ff8c00;
+}
+
+.bgColor {
+  background-color: #0f172a;
+}
+.btnColor:hover {
+  background-color: #334155;
+}
+.textColor {
+  color: rgb(203, 213, 225);
+}
+.btnBg {
+  background-color: rgba(30, 41, 59, 0.75);
+}
+.btnBg:hover {
+  background-color: rgba(30, 41, 59, 1);
+}
+.chartjs-hidden-iframe {
+  display: none;
+}
+.custom-svg {
+  background-color: #8957ff;
+  fill: #523499;
+}
+
 .vr {
   border-left: 1px solid #faf8f8; /* You can customize the color and style */
   height: 18px; /* Adjust the height as needed */
   width: 1px;
 }
+
