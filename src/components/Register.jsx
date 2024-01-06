@@ -2,7 +2,7 @@ import React from "react";
 
 const Register = () => {
   return (
-    <div className=" bg-white flex">
+    <div className=" bg-white flex h-screen">
       <div className="mx-auto px-10 md:px-0 py-10">
         {/* heading */}
         <div className=" mb-10">
@@ -30,7 +30,7 @@ const Register = () => {
         </div>
 
         {/* form */}
-        <div className=" w-[469.5px] h-[282px] text-sm font-medium mb-40">
+        <div className=" md:w-[469.5px] h-[282px] text-sm font-medium mb-32">
           {/* name */}
           <div className=" flex justify-between gap-4 ">
             <div className="mb-5">
