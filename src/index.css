@@ -13,6 +13,7 @@
   min-width: 0;
 }
 
+
 .purple {
   background-color: #8957ff;
 }
@@ -64,3 +65,10 @@
   background-color: #8957ff;
   fill: #523499;
 }
+
+.vr {
+  border-left: 1px solid #faf8f8; /* You can customize the color and style */
+  height: 18px; /* Adjust the height as needed */
+  width: 1px;
+}
+

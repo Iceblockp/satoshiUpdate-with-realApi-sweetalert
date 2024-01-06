@@ -10,12 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "bootstrap-icons": "^1.11.3",
     "chart.js": "^4.4.1",
     "embla-carousel-react": "^8.0.0-rc18",
     "flowbite": "^2.2.1",
     "react": "^18.2.0",
     "react-countup": "^6.5.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.37",
