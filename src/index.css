@@ -28,11 +28,15 @@
   border-width: 0.8px;
   border-radius: 12px;
 }
+.borderBcolor {
+  border-color: #334155;
+  border-width: 0 0 0.8px 0;
+}
 .green {
-  background-color: #0c8;
+  color: #0c8;
 }
 .red {
-  background-color: #f36;
+  color: #f36;
 }
 .orange {
   color: #ff8c00;
@@ -55,4 +59,8 @@
 }
 .chartjs-hidden-iframe {
   display: none;
+}
+.custom-svg {
+  background-color: #8957ff;
+  fill: #523499;
 }

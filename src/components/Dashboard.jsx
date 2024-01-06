@@ -8,10 +8,6 @@ const Dashboard = () => {
     if (chartRef && chartRef.current) {
       const ctx = chartRef.current.getContext("2d");
 
-      if (myChart) {
-        myChart.destroy();
-      }
-
       const earningsData = {
         labels: ["May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"],
         datasets: [
@@ -46,14 +42,20 @@ const Dashboard = () => {
         },
       });
     }
+
+    return () => {
+      if (myChart) {
+        myChart.destroy();
+      }
+    };
   }, []);
 
   return (
-    <div className=" bgColor">
+    <div className=" bgColor px-3 py-5 lg:p-6 xl:p-8">
       <div className="">
         <div className="mb-[40px]">
           <div className="flex items-center">
-            <div className="textColor text-4xl font-bold mt-[12px] p-[6px] w-[50%]">
+            <div className="  textColor text-4xl font-bold mt-[12px] p-[6px] w-[50%]">
               Dashboard
             </div>
             <div className="w-[50%] justify-end gap-2  mt-[12px] p-[6px] flex">
@@ -80,10 +82,10 @@ const Dashboard = () => {
             </div>
           </div>
           <div className="flex ">
-            <div className="w-8/12 mt-[24px] px-[12px] ">
+            <div className="w-8/12 max-2xl:w-full mt-[24px] pe-[12px]">
               <div className="flex flex-col gap-3 md:gap-6">
-                <div className="flex items-center">
-                  <div className="w-[30%] mt-[12px] px-[6px]">
+                <div className="flex items-center max-md:min-sm:grid grid-cols-2 max-sm:flex-col">
+                  <div className="w-[30%] max-md:w-full mt-[12px] px-[6px]">
                     <div className="p-[16px]  borderColor">
                       <div className="flex gap-2 items-center">
                         <img
@@ -97,7 +99,7 @@ const Dashboard = () => {
                         3.2893 USDT
                       </div>
                       <div className="mt-2 flex items-center gap-2 text-xs textColor ">
-                        <div className="rounded-md border border-transparent green">
+                        <div className="rounded-md border border-transparent bg-[#0c8]">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
@@ -117,7 +119,7 @@ const Dashboard = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="w-[30%] mt-[12px] px-[6px]">
+                  <div className="w-[30%] max-md:w-full mt-[12px] px-[6px]">
                     <div className="p-[16px]  borderColor">
                       <div className="flex gap-2 items-center">
                         <img
@@ -131,7 +133,7 @@ const Dashboard = () => {
                         10.745,49 ADA
                       </div>
                       <div className="mt-2 flex items-center gap-2 text-xs textColor ">
-                        <div className="rounded-md border border-transparent red">
+                        <div className="rounded-md border border-transparent bg-[#f36]">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
@@ -151,7 +153,7 @@ const Dashboard = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="w-[30%] mt-[12px] px-[6px]">
+                  <div className="w-[30%] max-md:w-full mt-[12px] px-[6px]">
                     <div className="p-[16px]  borderColor">
                       <div className="flex gap-2 items-center">
                         <img
@@ -165,7 +167,7 @@ const Dashboard = () => {
                         7.890,00 EOS
                       </div>
                       <div className="mt-2 flex items-center gap-2 text-xs textColor ">
-                        <div className="rounded-md border border-transparent red">
+                        <div className="rounded-md border border-transparent bg-[#f36]">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
@@ -185,7 +187,7 @@ const Dashboard = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="w-[10%] mt-[12px] px-[6px]  ">
+                  <div className="w-[10%] max-md:hidden mt-[12px] px-[6px]  ">
                     <div className=" h-[115.2px] flex textColor btnBg border borderColor">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -205,7 +207,7 @@ const Dashboard = () => {
                   </div>
                 </div>
                 <div className=" borderColor">
-                  <div className=" p-[24px] mx-auto text-Color">
+                  <div className="min-h-[280px] p-[24px] mx-auto text-Color">
                     <div className=" flex justify-between textColor">
                       <div>Earnings</div>
                       <div className=" cursor-pointer">
@@ -228,11 +230,341 @@ const Dashboard = () => {
                     <canvas ref={chartRef} width="750" height="280"></canvas>
                   </div>
                 </div>
-                <div className="h-[200px]">3</div>
+                <div className="borderColor">
+                  <div className="p-6">
+                    {/* title */}
+                    <div className="flex justify-between items-center">
+                      <div className="textColor font-semibold">
+                        Transaction History
+                      </div>
+                      <div className=" cursor-pointer textColor">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth="1.5"
+                          stroke="currentColor"
+                          className="w-6 h-4"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    {/* table */}
+                    <div>
+                      <div className="flex items-center justify-between gap-6 py-6 borderBcolor">
+                        <div className="flex items-center gap-3  ">
+                          <div className=" bg-[#1F3057] rounded-full ">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="#8957ff"
+                              viewBox="0 0 24 24"
+                              strokeWidth="1.5"
+                              stroke="#1F3057"
+                              className="w-10 h-10 pt-2 pb-2 pl-2 pr-1 -rotate-45 "
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
+                              />
+                            </svg>
+                          </div>
+                          <div className="">
+                            <div className="font-bold text-sm textColor">
+                              Bitcoin
+                            </div>
+                            <div className="text-xs text-gray-400">
+                              2 days ago
+                            </div>
+                          </div>
+                        </div>
+                        <div className="text-sm textColor max-md:hidden">
+                          {" "}
+                          0xd029384sd343fd...eq23
+                        </div>
+                        <div className="orange btnBg p-1 text-xs rounded-md font-semibold max-md:hidden">
+                          Pending
+                        </div>
+                        <div className="">
+                          <div className="textColor font-semibold">
+                            +0.2948 BTC
+                          </div>
+                          <div className="text-gray-400 font-semibold text-xs text-end">
+                            +$10,930.90
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex items-center justify-between gap-6 py-6 borderBcolor">
+                        <div className="flex items-center gap-3  ">
+                          <div className=" bg-[#1F3057] rounded-full ">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="#8957ff"
+                              viewBox="0 0 24 24"
+                              strokeWidth="1.5"
+                              stroke="#1F3057"
+                              className="w-10 h-10 pt-2 pb-2 pl-2 pr-1 -rotate-45 "
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
+                              />
+                            </svg>
+                          </div>
+                          <div className="">
+                            <div className="font-bold text-sm textColor">
+                              Cardano
+                            </div>
+                            <div className="text-xs text-gray-400">
+                              2 days ago
+                            </div>
+                          </div>
+                        </div>
+                        <div className="text-sm textColor max-md:hidden">
+                          {" "}
+                          0xd029384sd343fd...eq23
+                        </div>
+                        <div className="red btnBg p-1 text-xs rounded-md font-semibold max-md:hidden">
+                          Canceled
+                        </div>
+                        <div className="">
+                          <div className="textColor font-semibold">
+                            +0.2948 BTC
+                          </div>
+                          <div className="text-gray-400 font-semibold text-xs text-end">
+                            +$10,930.90
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex items-center justify-between gap-6 py-6 borderBcolor">
+                        <div className="flex items-center gap-3  ">
+                          <div className=" bg-[#1F3057] rounded-full ">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="#8957ff"
+                              viewBox="0 0 24 24"
+                              strokeWidth="1.5"
+                              stroke="#1F3057"
+                              className="w-10 h-10 pt-2 pb-2 pl-2 pr-1 -rotate-45 "
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
+                              />
+                            </svg>
+                          </div>
+                          <div className="">
+                            <div className="font-bold text-sm textColor">
+                              Binance
+                            </div>
+                            <div className="text-xs text-gray-400">
+                              2 days ago
+                            </div>
+                          </div>
+                        </div>
+                        <div className="text-sm textColor max-md:hidden">
+                          {" "}
+                          0xd029384sd343fd...eq23
+                        </div>
+                        <div className="green btnBg p-1 text-xs rounded-md font-semibold max-md:hidden">
+                          Successful
+                        </div>
+                        <div className="">
+                          <div className="textColor font-semibold">
+                            +0.2948 BTC
+                          </div>
+                          <div className="text-gray-400 font-semibold text-xs text-end">
+                            +$10,930.90
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex items-center justify-between gap-6 py-6 borderBcolor">
+                        <div className="flex items-center gap-3  ">
+                          <div className=" bg-[#1F3057] rounded-full ">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="#8957ff"
+                              viewBox="0 0 24 24"
+                              strokeWidth="1.5"
+                              stroke="#1F3057"
+                              className="w-10 h-10 pt-2 pb-2 pl-2 pr-1 -rotate-45 "
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
+                              />
+                            </svg>
+                          </div>
+                          <div className="">
+                            <div className="font-bold text-sm textColor">
+                              Bitcoin
+                            </div>
+                            <div className="text-xs text-gray-400">
+                              2 days ago
+                            </div>
+                          </div>
+                        </div>
+                        <div className="text-sm textColor max-md:hidden">
+                          {" "}
+                          0xd029384sd343fd...eq23
+                        </div>
+                        <div className="orange btnBg p-1 text-xs rounded-md font-semibold max-md:hidden">
+                          Pending
+                        </div>
+                        <div className="">
+                          <div className="textColor font-semibold">
+                            +0.2948 BTC
+                          </div>
+                          <div className="text-gray-400 font-semibold text-xs text-end">
+                            +$10,930.90
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex items-center justify-between gap-6 py-6 borderBcolor">
+                        <div className="flex items-center gap-3  ">
+                          <div className=" bg-[#1F3057] rounded-full ">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="#8957ff"
+                              viewBox="0 0 24 24"
+                              strokeWidth="1.5"
+                              stroke="#1F3057"
+                              className="w-10 h-10 pt-2 pb-2 pl-2 pr-1 -rotate-45 "
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
+                              />
+                            </svg>
+                          </div>
+                          <div className="">
+                            <div className="font-bold text-sm textColor">
+                              Bitcoin
+                            </div>
+                            <div className="text-xs text-gray-400">
+                              2 days ago
+                            </div>
+                          </div>
+                        </div>
+                        <div className="text-sm textColor max-md:hidden">
+                          {" "}
+                          0xd029384sd343fd...eq23
+                        </div>
+                        <div className="red btnBg p-1 text-xs rounded-md font-semibold max-md:hidden">
+                          Canceled
+                        </div>
+                        <div className="">
+                          <div className="textColor font-semibold">
+                            +0.2948 BTC
+                          </div>
+                          <div className="text-gray-400 font-semibold text-xs text-end">
+                            +$10,930.90
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex items-center justify-between gap-6 py-6 borderBcolor">
+                        <div className="flex items-center gap-3  ">
+                          <div className=" bg-[#1F3057] rounded-full ">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="#8957ff"
+                              viewBox="0 0 24 24"
+                              strokeWidth="1.5"
+                              stroke="#1F3057"
+                              className="w-10 h-10 pt-2 pb-2 pl-2 pr-1 -rotate-45 "
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
+                              />
+                            </svg>
+                          </div>
+                          <div className="">
+                            <div className="font-bold text-sm textColor">
+                              Bitcoin
+                            </div>
+                            <div className="text-xs text-gray-400">
+                              2 days ago
+                            </div>
+                          </div>
+                        </div>
+                        <div className="text-sm textColor max-md:hidden">
+                          {" "}
+                          0xd029384sd343fd...eq23
+                        </div>
+                        <div className="green btnBg p-1 text-xs rounded-md font-semibold max-md:hidden">
+                          Successful
+                        </div>
+                        <div className="">
+                          <div className="textColor font-semibold">
+                            +0.2948 BTC
+                          </div>
+                          <div className="text-gray-400 font-semibold text-xs text-end">
+                            +$10,930.90
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex items-center justify-between gap-6 pt-6 ">
+                        <div className="flex items-center gap-3  ">
+                          <div className=" bg-[#1F3057] rounded-full ">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="#8957ff"
+                              viewBox="0 0 24 24"
+                              strokeWidth="1.5"
+                              stroke="#1F3057"
+                              className="w-10 h-10 pt-2 pb-2 pl-2 pr-1 -rotate-45 "
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
+                              />
+                            </svg>
+                          </div>
+                          <div className="">
+                            <div className="font-bold text-sm textColor">
+                              Bitcoin
+                            </div>
+                            <div className="text-xs text-gray-400">
+                              2 days ago
+                            </div>
+                          </div>
+                        </div>
+                        <div className="text-sm textColor max-md:hidden">
+                          {" "}
+                          0xd029384sd343fd...eq23
+                        </div>
+                        <div className="green btnBg p-1 text-xs rounded-md font-semibold max-md:hidden">
+                          Successful
+                        </div>
+                        <div className="">
+                          <div className="textColor font-semibold">
+                            +0.2948 BTC
+                          </div>
+                          <div className="text-gray-400 font-semibold text-xs text-end">
+                            +$10,930.90
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="w-4/12">
-              <div className=" mt-[24px] px-[12px]">
+            <div className="w-4/12 max-2xl:hidden">
+              <div className=" mt-[24px] px-[12px]  flex flex-col gap-6">
+                {/* Balance */}
                 <div className="p-[24px] flex flex-col textColor borderColor">
                   <div className="flex  justify-between font-semibold mb-3">
                     <div className="">Balance</div>
@@ -299,6 +631,7 @@ const Dashboard = () => {
                     </div>
                   </div>
                 </div>
+                {/* Staking Rewards */}
                 <div>
                   <div>
                     <div className=" borderColor p-[24px]">
@@ -338,7 +671,9 @@ const Dashboard = () => {
                                   </div>
                                   <div className="text-xs"> 25% APR</div>
                                 </div>
-                                <div className="ms-auto">1030 ADA</div>
+                                <div className="ms-[114px] text-sm font-semibold">
+                                  1030 ADA
+                                </div>
                               </div>
                               <div className=" pt-2">
                                 <div className="relative bgColor">
@@ -349,7 +684,7 @@ const Dashboard = () => {
                           </div>
                         </div>
                         <div className="btnBg p-4 rounded-xl">
-                          <div className="flex gap-3 rounded-3 ">
+                          <div className="flex  gap-3 rounded-3 ">
                             <div>
                               <img
                                 src="https://satoshi.webpixels.io/img/crypto/icon/eth.svg"
@@ -357,14 +692,16 @@ const Dashboard = () => {
                               />
                             </div>
                             <div className="gap-2">
-                              <div className=" w-full textColor mb-1 flex justify-between">
+                              <div className=" w-full textColor mb-1 flex justify-between ">
                                 <div className="">
                                   <div className="font-semibold mb-2">
                                     Staked ETH
                                   </div>
                                   <div className="text-xs"> 16% APR</div>
                                 </div>
-                                <div className="ms-auto">9.5 ETH</div>
+                                <div className="ms-[114px] text-sm font-semibold">
+                                  9.5 ETH
+                                </div>
                               </div>
                               <div className=" pt-2">
                                 <div className="relative bgColor">
@@ -390,7 +727,9 @@ const Dashboard = () => {
                                   </div>
                                   <div className="text-xs"> 13% APR</div>
                                 </div>
-                                <div className="ms-auto">760 XRP</div>
+                                <div className="ms-[114px] text-sm font-semibold">
+                                  760 XRP
+                                </div>
                               </div>
                               <div className=" pt-2">
                                 <div className="relative bgColor">
@@ -401,6 +740,94 @@ const Dashboard = () => {
                           </div>
                         </div>
                       </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Subscription */}
+                <div className="borderColor">
+                  <div className="p-6">
+                    <div className="flex justify-between items-center mb-4">
+                      <div className="textColor font-bold ">Subscriptions</div>
+                      <div className="green flex">
+                        <div className="">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth="1.5"
+                            stroke="currentColor"
+                            className="w-6 h-6 py-1 me-2"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18"
+                            />
+                          </svg>
+                        </div>
+                        <div className="">7.8%</div>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-nowrap gap-2 overflow-auto">
+                      <div className=" flex-none btnBg rounded-lg">
+                        <div className="p-3">
+                          <div className="flex gap-2">
+                            <div className="h-[20px] w-[20px]">
+                              <img
+                                src="https://satoshi.webpixels.io/img/social/youtube.svg"
+                                alt=""
+                              />
+                            </div>
+                            <div className="textColor text-sm font-semibold">
+                              Youtube
+                            </div>
+                          </div>
+                          <div className="mt-4 textColor font-bold text-sm">
+                            $10.99
+                          </div>
+                        </div>
+                      </div>
+                      <div className=" flex-none btnBg rounded-lg">
+                        <div className="p-3">
+                          <div className="flex gap-2">
+                            <div className="h-[20px] w-[20px]">
+                              <img
+                                src="	https://satoshi.webpixels.io/img/social/spotify.svg"
+                                alt=""
+                              />
+                            </div>
+                            <div className="textColor text-sm font-semibold">
+                              Spotify
+                            </div>
+                          </div>
+                          <div className="mt-4 textColor font-bold text-sm">
+                            $7.99
+                          </div>
+                        </div>
+                      </div>
+                      <div className=" flex-none btnBg rounded-lg">
+                        <div className="p-3">
+                          <div className="flex gap-2">
+                            <div className="h-[20px] w-[20px]">
+                              <img
+                                src="https://satoshi.webpixels.io/img/social/github.svg"
+                                alt=""
+                              />
+                            </div>
+                            <div className="textColor text-sm font-semibold">
+                              GitHub
+                            </div>
+                          </div>
+                          <div className="mt-4 textColor font-bold text-sm">
+                            $3.99
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className=" cursor-pointer text-sm font-bold text-center mt-4 text-[#8957ff] hover:text-[#6136c6]">
+                      Manage Subscription
                     </div>
                   </div>
                 </div>
