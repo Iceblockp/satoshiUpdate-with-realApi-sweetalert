@@ -3,6 +3,10 @@ import React from 'react'
 import Container from './components/Container'
 import { Routes, Route } from 'react-router-dom'
 import Login from "./components/Login";
+import Register from "./components/Register";
+import CreateForm from "./components/CreateForm";
+
+
 
 
 
@@ -14,9 +18,10 @@ const App = () => {
         <Route path='/' element={<div>
           Home
         </div>} ></Route>
-        <Route path='about' element={<div>
-          About
-        </div>} ></Route>
+        <Route path='createForm' element={
+        
+        <CreateForm />} ></Route>
+  
         <Route path='account' element={
                 <Login />
               } ></Route>
@@ -27,7 +32,6 @@ const App = () => {
           next
         </div>} ></Route>
       </Routes>
-
 
     </Container>
   );
