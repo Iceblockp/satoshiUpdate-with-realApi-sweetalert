@@ -71,7 +71,7 @@ const Container = ({ children }) => {
         </div>
         <div className=" py-[8px] block lg:hidden ">
           <div className=" px-[16px] flex justify-between items-center ">
-            <div onClick={press} className=" px-[6px] py-[4px] ">
+            <div onClick={press} className=" nav px-[6px] py-[4px] ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -131,7 +131,7 @@ const Container = ({ children }) => {
        {/* <LeftDrawerContainer/> */}
 
         <div  className={` ${draw ? "mt-[-550px]":"mt-0"} lg:mt-0 duration-500 relative z-40 lg:overflow-auto border h-full lg:max-h-screen border-white flex-grow lg:rounded-tl-[1rem] rounded-t-[1rem] `}>
-          <div className=" h-auto mb-[20px] ">
+          <div className=" h-auto mb-[70px] ">
             {children}
           </div>
         </div>
