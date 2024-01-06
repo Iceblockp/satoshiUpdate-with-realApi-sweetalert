@@ -27,13 +27,11 @@ const App = () => {
         
         <CreateForm />} ></Route>
   
-        <Route path='account' element={
+        <Route path='login' element={
                 <Login />
               } ></Route>
-        <Route path='other' element={<div>
-          other
-        </div>} ></Route>
-        <Route path='next' element={<div>
+        <Route path='register' element={<Register/>} ></Route>
+        <Route path='table' element={<div>
           next
         </div>} ></Route>
       </Routes>

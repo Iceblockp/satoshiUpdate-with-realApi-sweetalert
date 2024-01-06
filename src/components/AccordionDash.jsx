@@ -5,7 +5,7 @@ const AccordionDash = ({ acArray ,open}) => {
   return (
     <div className={`${!open && 'hidden' }`}>
       <ul>
-        {acArray.map(({ id, name, link }) => <EachLink key={id} name={name} />  )}
+        {acArray.map(({ id, name, link }) => <EachLink key={id} name={name} link={link} />  )}
       </ul>
     </div>
   );
