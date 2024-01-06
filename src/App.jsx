@@ -1,10 +1,15 @@
+
 import React from 'react'
 import Container from './components/Container'
 import { Routes, Route } from 'react-router-dom'
+import Login from "./components/Login";
+
+
 
 const App = () => {
   return (
     <Container>
+
       <Routes>
         <Route path='/' element={<div>
           Home
@@ -12,9 +17,9 @@ const App = () => {
         <Route path='about' element={<div>
           About
         </div>} ></Route>
-        <Route path='account' element={<div>
-          account
-        </div>} ></Route>
+        <Route path='account' element={
+                <Login />
+              } ></Route>
         <Route path='other' element={<div>
           other
         </div>} ></Route>
@@ -22,8 +27,10 @@ const App = () => {
           next
         </div>} ></Route>
       </Routes>
-    </Container>
-  )
-}
 
-export default App
+
+    </Container>
+  );
+};
+
+export default App;
