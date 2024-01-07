@@ -6,6 +6,8 @@ import { Routes, Route } from 'react-router-dom'
 import Login from "./components/Login";
 import Register from "./components/Register";
 import CreateForm from "./components/CreateForm";
+import Table from './components/Table'
+
 
 
 
@@ -30,10 +32,9 @@ const App = () => {
         <Route path='login' element={
                 <Login />
               } ></Route>
-        <Route path='register' element={<Register/>} ></Route>
-        <Route path='table' element={<div>
-          next
-        </div>} ></Route>
+        <Route path='register' element={<Register />} ></Route>
+        <Route path='table' element={<Table />} ></Route>
+
       </Routes>
 
     </Container>
