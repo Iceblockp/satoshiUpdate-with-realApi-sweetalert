@@ -70,7 +70,7 @@ const TopDrawerContainer = ({ draw }) => {
                     <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
                   </svg>
                 </div>
-                <div className=" text-[.875rem] font-[500] text-white ">
+                <div className=" text-[.875rem] font-[500] text-white select-none ">
                   Dashboards
                 </div>
                 <div className=" ml-auto">
@@ -96,17 +96,17 @@ const TopDrawerContainer = ({ draw }) => {
                   {
                     id: 1,
                     name: "Default",
-                    link: "home",
+                    link: "/",
                   },
                   {
                     id: 2,
                     name: "Analytics",
-                    link: "about",
+                    link: "/",
                   },
                   {
                     id: 3,
                     name: "Wallet",
-                    link: "about",
+                    link: "/",
                   },
                 ]} open={dashOpen}
               />
@@ -124,7 +124,7 @@ const TopDrawerContainer = ({ draw }) => {
                     <path d="M18.375 2.25c-1.035 0-1.875.84-1.875 1.875v15.75c0 1.035.84 1.875 1.875 1.875h.75c1.035 0 1.875-.84 1.875-1.875V4.125c0-1.036-.84-1.875-1.875-1.875h-.75ZM9.75 8.625c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-.75a1.875 1.875 0 0 1-1.875-1.875V8.625ZM3 13.125c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v6.75c0 1.035-.84 1.875-1.875 1.875h-.75A1.875 1.875 0 0 1 3 19.875v-6.75Z" />
                   </svg>
                 </div>
-                <div className=" text-[.875rem] font-[500] text-white ">
+                <div className=" text-[.875rem] font-[500] text-white select-none ">
                   Pages
                 </div>
                 <div className=" ml-auto">
@@ -150,17 +150,17 @@ const TopDrawerContainer = ({ draw }) => {
                 {
                   id: 1,
                   name: "Table Listing",
-                  link: "home",
+                  link: "/table",
                 },
                 {
                   id: 2,
                   name: "Create Form",
-                  link: "about",
+                  link: "/createForm",
                 },
                 {
                   id: 3,
                   name: "Collection",
-                  link: "about",
+                  link: "/createForm",
                 },
               ]} open={pageOpen}
                />
@@ -182,7 +182,7 @@ const TopDrawerContainer = ({ draw }) => {
                     />
                   </svg>
                 </div>
-                <div className=" text-[.875rem] font-[500] text-white ">
+                <div className=" text-[.875rem] font-[500] text-white select-none ">
                   Account
                 </div>
                 <div className=" ml-auto">
@@ -207,18 +207,13 @@ const TopDrawerContainer = ({ draw }) => {
                   {
                     id: 1,
                     name: "Login",
-                    link: "home",
+                    link: "/login",
                   },
                   {
                     id: 2,
                     name: "Register",
-                    link: "about",
-                  },
-                  {
-                    id: 3,
-                    name: "Setting",
-                    link: "about",
-                  },
+                    link: "/register",
+                  }
                 ]} open={accountOpen} />
             </li>
             {/* Other  */}
@@ -239,7 +234,7 @@ const TopDrawerContainer = ({ draw }) => {
                     <path d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z" />
                   </svg>
                 </div>
-                <div className=" text-[.875rem] font-[500] text-white ">
+                <div className=" text-[.875rem] font-[500] text-white select-none ">
                   Other
                 </div>
                 <div className=" ml-auto">
@@ -265,22 +260,22 @@ const TopDrawerContainer = ({ draw }) => {
                 {
                   id: 1,
                   name: "Pricing Plans",
-                  link: "home",
+                  link: "/",
                 },
                 {
                   id: 2,
                   name: "Terms of Service",
-                  link: "about",
+                  link: "/",
                 },
                 {
                   id: 3,
                   name: "Error Page",
-                  link: "about",
+                  link: "/",
                 },
                 {
                   id:4,
                   name: "Landing Page",
-                  link: "other"
+                  link: "/"
                 }
               ]} open={otherOpen}
               />

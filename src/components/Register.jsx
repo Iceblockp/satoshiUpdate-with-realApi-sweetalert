@@ -2,7 +2,7 @@ import React from "react";
 
 const Register = () => {
   return (
-    <div className=" bg-white flex h-screen">
+    <div className=" bg-white flex h-full">
       <div className="mx-auto px-10 md:px-0 py-10">
         {/* heading */}
         <div className=" mb-10">

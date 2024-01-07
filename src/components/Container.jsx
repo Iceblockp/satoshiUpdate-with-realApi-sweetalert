@@ -74,7 +74,7 @@ const Container = ({ children }) => {
         </div>
         <div className=" py-[8px] block lg:hidden ">
           <div className=" px-[16px] flex justify-between items-center ">
-            <div onClick={press} className=" nav px-[6px] py-[4px] ">
+            <div onClick={press} className=" lg:pointer-events-none nav px-[6px] py-[4px] ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

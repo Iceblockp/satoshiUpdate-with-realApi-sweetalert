@@ -3,9 +3,9 @@ import React from "react";
 const CreateForm = () => {
   return (
     // header
-    <div className="">
+    <div className=" px-6 pb-10">
       {/* add new asset */}
-      <div className=" flex justify-between">
+      <div className=" flex justify-between py-4">
         <div className="">
           <div className=" flex gap-4 text-center items-center">
             {/* x button */}
@@ -27,7 +27,7 @@ const CreateForm = () => {
             </div>
 
             <div className="vr opacity-20 my-1"></div>
-            <h1 className=" text-xl text-slate-300 font-bold">
+            <h1 className="text-xl text-slate-300 font-bold">
               Add a new asset
             </h1>
           </div>
@@ -65,15 +65,15 @@ const CreateForm = () => {
       <hr className=" my-6 opacity-30" />
 
       {/* asset name */}
-      <div className=" flex text-center items-center md:gap-36">
+      <div className=" flex flex-col md:flex-row text-center items-start md:items-center   md:gap-36">
         <div className="">
           <label htmlFor="" className=" text-slate-300 select-none">
             Asset name
           </label>
         </div>
-        <div className="">
+        <div className=" w-full max-w-[570.5px] ">
           <input
-            className="md:w-[570.5px] md:h-[44px] border border-slate-600 bg-transparent font-semibold rounded-lg"
+            className=" md:h-[44px] w-full border border-slate-600 bg-transparent font-semibold rounded-lg"
             placeholder="Asset name"
             type="text"
           />
@@ -82,19 +82,19 @@ const CreateForm = () => {
 
       <hr className=" my-6 opacity-30 " />
       {/* description */}
-      <div className=" flex text-center items-center md:gap-36">
+      <div className=" flex flex-col md:flex-row text-center items-start md:items-center md:gap-36">
         <div className="">
           <label htmlFor="" className=" text-slate-300 select-none">
             Description
           </label>
         </div>
-        <div className="">
+        <div className=" w-full max-w-[570px]">
           <textarea
             name=""
             id=""
             cols="30"
             rows="2"
-            className="md:w-[570.5px]  bg-transparent  border border-slate-600 font-semibold rounded-lg"
+            className=" w-full  bg-transparent  border border-slate-600 font-semibold rounded-lg"
             placeholder="Asset description "
           ></textarea>
           <span className="block text-start text-slate-400">
@@ -300,7 +300,7 @@ const CreateForm = () => {
           </label>
         </div>
         <div className=" md:ms-20">
-          <label className="relative inline-flex items-center mb-5 cursor-pointer">
+          <label className="relative inline-flex items-center  cursor-pointer">
             <input type="checkbox" defaultValue className="sr-only peer" />
             <div className="w-11 h-6 bg-gray-700 peer-focus:outline-none  peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:w-5 after:h-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600" />
             <span className="ms-3 select-none text-slate-300">

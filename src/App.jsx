@@ -34,6 +34,7 @@ const App = () => {
               } ></Route>
         <Route path='register' element={<Register />} ></Route>
         <Route path='table' element={<Table />} ></Route>
+
       </Routes>
 
     </Container>
