@@ -1,10 +1,11 @@
 import React from 'react'
 import Container from './components/Container'
+import Table from './components/Table'
 
 const App = () => {
   return (
     <Container>
-        hello
+        <Table/>
     </Container>
   )
 }

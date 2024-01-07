@@ -12,8 +12,8 @@ const Container = ({children}) => {
                 <div>middle</div>
                 <div>connect</div>
             </div>
-            <div className=' lg:overflow-y-scroll border border-white flex-grow lg:rounded-tl-[1rem] rounded-t-[1rem] '>
-                <div className=" px-[12px] py-[20px] lg:p-[24px]">
+            <div className='lg:overflow-auto h-full lg:max-h-screen border border-gray-800 flex-grow lg:rounded-tl-[1rem] rounded-t-[1rem] '>
+                <div className=" mb-[62px]">
                 {children}
                </div>
            </div>
