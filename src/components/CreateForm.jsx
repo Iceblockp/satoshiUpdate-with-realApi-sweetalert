@@ -27,12 +27,12 @@ const CreateForm = () => {
             </div>
 
             <div className="vr opacity-20 my-1"></div>
-            <h1 className="text-xl text-slate-300 font-bold">
+            <h1 className="md:text-xl text-slate-300 font-bold">
               Add a new asset
             </h1>
           </div>
         </div>
-        <div className="flex gap-2 text-center items-center">
+        <div className=" hidden  md:flex gap-2 text-center items-center">
           <div className="">
             <a
               href="#!"
@@ -106,14 +106,14 @@ const CreateForm = () => {
       <hr className=" my-6 opacity-30 " />
 
       {/* select type */}
-      <div className=" flex md:gap-36 text-center items-center">
-        <div className="">
+      <div className=" flex flex-col md:flex-row md:gap-36 text-center items-start md:items-center ">
+        <div className=" ">
           <label htmlFor="" className=" text-slate-300 select-none">
             Select type
           </label>
         </div>
-        <div className="">
-          <div className=" flex gap-4">
+        <div className="w-full max-w-[570.5px]">
+          <div className=" flex flex-wrap gap-4">
             <div className=" border border-slate-500 rounded-md px-6 py-6 hover:bg-black ">
               <label htmlFor="">
                 <span className=" flex flex-col justify-center items-center text-center gap-3">
@@ -197,14 +197,14 @@ const CreateForm = () => {
       <hr className=" my-6 opacity-30 " />
 
       {/* icon */}
-      <div className=" flex md:gap-48 text-center items-center">
+      <div className=" flex flex-col md:flex-row md:gap-48 text-center items-start md:items-center">
         <div className="">
           <label htmlFor="" className=" text-slate-300 select-none">
             Icons
           </label>
         </div>
 
-        <div className="">
+        <div className="w-full max-w-[570.5px]">
           <div className="">
             <div className=" flex  items-center text-center gap-4">
               <a href="#">
@@ -249,17 +249,17 @@ const CreateForm = () => {
       <hr className=" my-6 opacity-30 " />
 
       {/* category */}
-      <div className=" flex text-center items-center md:gap-36">
+      <div className=" flex flex-col md:flex-row  text-center items-start md:items-center md:gap-40">
         <div className="">
           <label htmlFor="" className=" text-slate-300 select-none">
-            Asset name
+            Category
           </label>
         </div>
-        <div className="">
+        <div className="w-full max-w-[570.5px]">
           <select
             name=""
             id=""
-            className="md:w-[570.5px] md:h-[44px] border border-slate-600 bg-transparent font-normal rounded-lg text-slate-300 "
+            className=" w-full md:w-[570.5px] md:h-[44px] border border-slate-600 bg-transparent font-normal rounded-lg text-slate-300 "
           >
             <option value="Apple" selected>
               Apple
@@ -272,20 +272,20 @@ const CreateForm = () => {
 
       <hr className=" my-6 opacity-30 " />
       {/* date */}
-      <div className=" flex text-center items-center md:gap-24">
+      <div className=" flex flex-col md:flex-row  text-center items-start md:items-center md:gap-24">
         <div className="">
           <label htmlFor="" className=" text-slate-300 select-none">
             Publishing options
           </label>
         </div>
-        <div className=" flex flex-col gap-2">
+        <div className="w-full max-w-[570.5px] flex flex-col gap-2">
           <span className="flex text-start text-slate-300">Start Date</span>
 
           <input
             type="date"
             name=""
             id=""
-            className="md:w-[570.5px] md:h-[44px] border border-slate-600 bg-transparent font-normal rounded-lg text-slate-300"
+            className=" w-full md:w-[570.5px] md:h-[44px] border border-slate-600 bg-transparent font-normal rounded-lg text-slate-300"
           />
         </div>
       </div>
@@ -293,7 +293,7 @@ const CreateForm = () => {
       <hr className=" my-6 opacity-30 " />
 
       {/* options */}
-      <div className=" flex text-center items-center md:gap-24">
+      <div className=" flex flex-col md:flex-row  text-center items-start md:items-center md:gap-24">
         <div className="">
           <label htmlFor="" className=" text-slate-300 select-none">
             Options
