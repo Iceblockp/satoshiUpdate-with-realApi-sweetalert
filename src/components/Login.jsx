@@ -19,7 +19,7 @@ const Login = () => {
 
           {/* free trail */}
           <div className=" text-slate-500 text-sm mt-4">
-            <span>Don't have an account?</span>
+            <span>Do not have an account?</span>
             <a href="#" className=" px-1 font-normal  text-purple-500">
               Sign up{" "}
               <span className="text-slate-500 font-normal">
@@ -33,19 +33,19 @@ const Login = () => {
         <div className=" md:w-[469.5px] md:h-[282px] text-sm font-medium">
           {/* email */}
           <div className="mb-5">
-            <label className="" htmlFor="email">
-              Email Address
-            </label>
+            <label htmlFor="email">Email Address</label>
             <input
               className=" mt-2 w-full rounded-lg border-1 border-slate-300 focus-visible:outline-none focus-visible:border-purple-500"
               type="email"
               id="email"
+              name="myEmail"
+              autoComplete="name"
             />
           </div>
           {/* password */}
           <div className=" mb-5">
             <div className=" flex justify-between">
-              <label htmlFor="">Password</label>
+              <label htmlFor="password">Password</label>
               <a href="#" className="font-normal text-purple-500">
                 Forgot password?
               </a>
@@ -71,9 +71,7 @@ const Login = () => {
           </div>
           {/* button */}
           <div className=" mb-5 w-full bg-black text-white text-center items-center py-3 rounded-md font-medium text-[16px] hover:bg-slate-700">
-            <a className="" href="#">
-              Sign in
-            </a>
+            <a href="#">Sign in</a>
           </div>
         </div>
 
