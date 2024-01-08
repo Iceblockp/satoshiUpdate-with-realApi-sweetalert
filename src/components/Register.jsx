@@ -86,9 +86,7 @@ const Register = () => {
               id=""
               className="mt-2 w-full rounded-lg border-1 border-slate-300 focus-visible:outline-none focus-visible:border-purple-500 font-light"
             >
-              <option value="friend" selected>
-                From a friend
-              </option>
+              <option value="friend">From a friend</option>
               <option value="search">Online search</option>
               <option value="media">Social media</option>
               <option value="advertising">Advertising</option>
