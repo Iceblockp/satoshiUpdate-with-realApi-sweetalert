@@ -67,7 +67,7 @@ const CreateForm = () => {
       {/* asset name */}
       <div className=" flex flex-col md:flex-row text-center items-start md:items-center   md:gap-36">
         <div className="">
-          <label htmlFor="" className=" text-slate-300 select-none">
+          <label htmlFor="assetName" className=" text-slate-300 select-none">
             Asset name
           </label>
         </div>
@@ -76,6 +76,7 @@ const CreateForm = () => {
             className=" md:h-[44px] w-full border border-slate-600 bg-transparent font-semibold rounded-lg"
             placeholder="Asset name"
             type="text"
+            id="assetName"
           />
         </div>
       </div>
@@ -84,14 +85,14 @@ const CreateForm = () => {
       {/* description */}
       <div className=" flex flex-col md:flex-row text-center items-start md:items-center md:gap-36">
         <div className="">
-          <label htmlFor="" className=" text-slate-300 select-none">
+          <label htmlFor="description" className=" text-slate-300 select-none">
             Description
           </label>
         </div>
         <div className=" w-full max-w-[570px]">
           <textarea
             name=""
-            id=""
+            id="description"
             cols="30"
             rows="2"
             className=" w-full  bg-transparent  border border-slate-600 font-semibold rounded-lg"
@@ -107,15 +108,13 @@ const CreateForm = () => {
 
       {/* select type */}
       <div className=" flex flex-col md:flex-row md:gap-36 text-center items-start md:items-center ">
-        <div className=" ">
-          <label htmlFor="" className=" text-slate-300 select-none">
-            Select type
-          </label>
+        <div>
+          <label className=" text-slate-300 select-none">Select type</label>
         </div>
         <div className="w-full max-w-[570.5px]">
           <div className=" flex flex-wrap gap-4">
             <div className=" border border-slate-500 rounded-md px-6 py-6 hover:bg-black ">
-              <label htmlFor="">
+              <label>
                 <span className=" flex flex-col justify-center items-center text-center gap-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -132,7 +131,7 @@ const CreateForm = () => {
               </label>
             </div>
             <div className=" border border-slate-500 rounded-md px-6 py-6 hover:bg-black">
-              <label htmlFor="">
+              <label>
                 <span className=" flex flex-col justify-center items-center text-center gap-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -153,7 +152,7 @@ const CreateForm = () => {
               </label>
             </div>
             <div className=" border border-slate-500 rounded-md px-6 py-6 hover:bg-black">
-              <label htmlFor="">
+              <label>
                 <span className=" flex flex-col justify-center items-center text-center gap-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -173,7 +172,7 @@ const CreateForm = () => {
               </label>
             </div>
             <div className=" border border-slate-500 rounded-md px-6 py-6 hover:bg-black ">
-              <label htmlFor="">
+              <label>
                 <span className=" flex flex-col justify-center items-center text-center gap-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -199,9 +198,7 @@ const CreateForm = () => {
       {/* icon */}
       <div className=" flex flex-col md:flex-row md:gap-48 text-center items-start md:items-center">
         <div className="">
-          <label htmlFor="" className=" text-slate-300 select-none">
-            Icons
-          </label>
+          <label className=" text-slate-300 select-none">Icons</label>
         </div>
 
         <div className="w-full max-w-[570.5px]">
@@ -215,10 +212,7 @@ const CreateForm = () => {
                 />
               </a>
               <div className=" flex items-center text-center gap-3">
-                <label
-                  htmlFor=""
-                  className="text-slate-300 select-none font-semibold bg-slate-800 px-3 py-1 rounded-md hover:bg-slate-700"
-                >
+                <label className="text-slate-300 select-none font-semibold bg-slate-800 px-3 py-1 rounded-md hover:bg-slate-700">
                   Upload
                 </label>
                 <a
@@ -251,14 +245,14 @@ const CreateForm = () => {
       {/* category */}
       <div className=" flex flex-col md:flex-row  text-center items-start md:items-center md:gap-40">
         <div className="">
-          <label htmlFor="" className=" text-slate-300 select-none">
+          <label htmlFor="category" className=" text-slate-300 select-none">
             Category
           </label>
         </div>
         <div className="w-full max-w-[570.5px]">
           <select
             name=""
-            id=""
+            id="category"
             className=" w-full md:w-[570.5px] md:h-[44px] border border-slate-600 bg-transparent font-normal rounded-lg text-slate-300 "
           >
             <option value="Apple">Apple</option>
@@ -272,7 +266,7 @@ const CreateForm = () => {
       {/* date */}
       <div className=" flex flex-col md:flex-row  text-center items-start md:items-center md:gap-24">
         <div className="">
-          <label htmlFor="" className=" text-slate-300 select-none">
+          <label htmlFor="startDate" className=" text-slate-300 select-none">
             Publishing options
           </label>
         </div>
@@ -282,7 +276,7 @@ const CreateForm = () => {
           <input
             type="date"
             name=""
-            id=""
+            id="startDate"
             className=" w-full md:w-[570.5px] md:h-[44px] border border-slate-600 bg-transparent font-normal rounded-lg text-slate-300"
           />
         </div>
@@ -292,14 +286,22 @@ const CreateForm = () => {
 
       {/* options */}
       <div className=" flex flex-col md:flex-row  text-center items-start md:items-center md:gap-24">
-        <div className="">
-          <label htmlFor="" className=" text-slate-300 select-none">
+        <div>
+          <label htmlFor="option" className=" text-slate-300 select-none">
             Options
           </label>
         </div>
         <div className=" md:ms-20">
-          <label className="relative inline-flex items-center  cursor-pointer">
-            <input type="checkbox" defaultValue className="sr-only peer" />
+          <label
+            htmlFor="option"
+            className="relative inline-flex items-center  cursor-pointer"
+          >
+            <input
+              id="option"
+              type="checkbox"
+              defaultValue
+              className="sr-only peer"
+            />
             <div className="w-11 h-6 bg-gray-700 peer-focus:outline-none  peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:w-5 after:h-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600" />
             <span className="ms-3 select-none text-slate-300">
               Make the asset public
