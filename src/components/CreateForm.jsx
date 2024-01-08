@@ -261,9 +261,7 @@ const CreateForm = () => {
             id=""
             className=" w-full md:w-[570.5px] md:h-[44px] border border-slate-600 bg-transparent font-normal rounded-lg text-slate-300 "
           >
-            <option value="Apple" selected>
-              Apple
-            </option>
+            <option value="Apple">Apple</option>
             <option value="Samsung">Samsung</option>
             <option value="Xiaomi">Xiaomi</option>
           </select>
