@@ -42,8 +42,8 @@ const TopDrawerContainer = ({ draw }) => {
         //     transform: `${draw ? "translateY(-550px)  " : "translateY(0)"}`
         //   }}
         className={`${
-          draw ? "translate-y-[-550px]" : "translate-y-0"
-        } lg:translate-y-0 px-[24px] duration-500`}
+          draw ? "translate-y-[-590px]" : "translate-y-0"
+        } lg:translate-y-0 px-[24px] duration-500 mb-10`}
       >
         {/* inBar  */}
         <div className=" py-[4px] mb-[20px] hidden lg:block ">
@@ -96,18 +96,9 @@ const TopDrawerContainer = ({ draw }) => {
                   {
                     id: 1,
                     name: "Default",
-                    link: "/",
-                  },
-                  {
-                    id: 2,
-                    name: "Analytics",
-                    link: "/",
-                  },
-                  {
-                    id: 3,
-                    name: "Wallet",
-                    link: "/",
-                  },
+                    link: "/dashboard",
+                  }
+                 
                 ]} open={dashOpen}
               />
             </li>
@@ -156,12 +147,7 @@ const TopDrawerContainer = ({ draw }) => {
                   id: 2,
                   name: "Create Form",
                   link: "/createForm",
-                },
-                {
-                  id: 3,
-                  name: "Collection",
-                  link: "/createForm",
-                },
+                }
               ]} open={pageOpen}
                />
             </li>
@@ -207,7 +193,7 @@ const TopDrawerContainer = ({ draw }) => {
                   {
                     id: 1,
                     name: "Login",
-                    link: "/login",
+                    link: "/",
                   },
                   {
                     id: 2,

@@ -16,28 +16,32 @@ import Table from './components/Table'
 
 const App = () => {
   return (
-    <Container>
+    
+    
+    
+    
+    <Routes>
 
-     
+      <Route path='/' element={
+        <Login />
+              } ></Route>
 
-
-      <Routes>
-        <Route path='/' element={
         
-        <Dashboard />} ></Route>
+
+
+        <Route path='dashboard' element={
+        <Container><Dashboard /></Container>} ></Route>
         <Route path='createForm' element={
         
-        <CreateForm />} ></Route>
+        <Container><CreateForm /></Container>} ></Route>
   
-        <Route path='login' element={
-                <Login />
-              } ></Route>
+        
         <Route path='register' element={<Register />} ></Route>
-        <Route path='table' element={<Table />} ></Route>
+        <Route path='table' element={<Container><Table /></Container>} ></Route>
 
+   
       </Routes>
 
-    </Container>
   );
 };
 
