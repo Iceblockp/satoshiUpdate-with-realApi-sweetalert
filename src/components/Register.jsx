@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   return (
@@ -19,13 +20,13 @@ const Register = () => {
 
           {/* free trail */}
           <div className=" text-slate-500 text-sm mt-4">
-            <span>Don't have an account?</span>
-            <a href="#" className=" px-1 font-normal  text-purple-500">
-              Sign up{" "}
+            <span>Already have an account?</span>
+            <div className=" inline px-1 font-normal  text-purple-500">
+              <Link to="/">Sign in </Link>
               <span className="text-slate-500 font-normal">
                 for a free trail.
               </span>
-            </a>
+            </div>
           </div>
         </div>
 
@@ -87,11 +88,10 @@ const Register = () => {
             </select>
           </div>
           {/* button */}
-          <div className=" mb-5 w-full bg-black text-white text-center items-center py-3 rounded-md font-medium text-[16px] hover:bg-slate-700">
-            <a className="" href="#">
-              Sign in
-            </a>
-          </div>
+          
+              <Link to="/"><div className=" mb-5 w-full bg-black text-white text-center items-center py-3 rounded-md font-medium text-[16px] hover:bg-slate-700">
+            Sign up
+            </div></Link>
         </div>
 
         {/* or */}

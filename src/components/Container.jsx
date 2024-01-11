@@ -137,7 +137,7 @@ const Container = ({ children }) => {
 
         <div
           className={` ${
-            draw ? "mt-[-550px]" : "mt-0"
+            draw ? "mt-[-590px]" : "mt-0"
           } lg:mt-0 duration-500 relative z-40 lg:overflow-auto h-full lg:max-h-screen flex-grow lg:rounded-tl-[1rem] rounded-t-[1rem] borderColor `}
         >
           <div className=" h-auto mb-[70px] ">{children}</div>

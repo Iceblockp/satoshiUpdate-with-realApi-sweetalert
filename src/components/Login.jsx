@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -20,12 +21,12 @@ const Login = () => {
           {/* free trail */}
           <div className=" text-slate-500 text-sm mt-4">
             <span>Do not have an account?</span>
-            <a href="#" className=" px-1 font-normal  text-purple-500">
-              Sign up{" "}
+            <div  className=" inline px-1 font-normal  text-purple-500">
+              <Link to="/register">Sign up </Link>
               <span className="text-slate-500 font-normal">
                 for a free trail.
               </span>
-            </a>
+            </div>
           </div>
         </div>
 
@@ -70,9 +71,10 @@ const Login = () => {
             </div>
           </div>
           {/* button */}
-          <div className=" mb-5 w-full bg-black text-white text-center items-center py-3 rounded-md font-medium text-[16px] hover:bg-slate-700">
-            <a href="#">Sign in</a>
-          </div>
+          
+            <Link to="/dashboard"><div className=" mb-5 w-full bg-black text-white text-center items-center py-3 rounded-md font-medium text-[16px] hover:bg-slate-700">
+              Sign in
+          </div></Link>
         </div>
 
         {/* or */}
