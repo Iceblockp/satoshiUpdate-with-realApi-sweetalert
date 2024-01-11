@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -19,13 +20,13 @@ const Login = () => {
 
           {/* free trail */}
           <div className=" text-slate-500 text-sm mt-4">
-            <span>Don't have an account?</span>
-            <a href="#" className=" px-1 font-normal  text-purple-500">
-              Sign up{" "}
+            <span>Do not have an account?</span>
+            <div  className=" inline px-1 font-normal  text-purple-500">
+              <Link to="/register">Sign up </Link>
               <span className="text-slate-500 font-normal">
                 for a free trail.
               </span>
-            </a>
+            </div>
           </div>
         </div>
 
@@ -33,19 +34,19 @@ const Login = () => {
         <div className=" md:w-[469.5px] md:h-[282px] text-sm font-medium">
           {/* email */}
           <div className="mb-5">
-            <label className="" htmlFor="email">
-              Email Address
-            </label>
+            <label htmlFor="email">Email Address</label>
             <input
               className=" mt-2 w-full rounded-lg border-1 border-slate-300 focus-visible:outline-none focus-visible:border-purple-500"
               type="email"
               id="email"
+              name="myEmail"
+              autoComplete="name"
             />
           </div>
           {/* password */}
           <div className=" mb-5">
             <div className=" flex justify-between">
-              <label htmlFor="">Password</label>
+              <label htmlFor="password">Password</label>
               <a href="#" className="font-normal text-purple-500">
                 Forgot password?
               </a>
@@ -70,11 +71,10 @@ const Login = () => {
             </div>
           </div>
           {/* button */}
-          <div className=" mb-5 w-full bg-black text-white text-center items-center py-3 rounded-md font-medium text-[16px] hover:bg-slate-700">
-            <a className="" href="#">
+          
+            <Link to="/dashboard"><div className=" mb-5 w-full bg-black text-white text-center items-center py-3 rounded-md font-medium text-[16px] hover:bg-slate-700">
               Sign in
-            </a>
-          </div>
+          </div></Link>
         </div>
 
         {/* or */}

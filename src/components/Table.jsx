@@ -2,15 +2,15 @@ import React from "react";
 
 const Table = () => {
   return (
-    <div className="">
-      <main className="">
+    <div>
+      <main>
         <div className="px-6 lg:px-7 pt-8 border-b border-gray-700 ">
           <div className="flex items-center">
             <h1 className="text-[2.25rem] text-white font-bold">Trades</h1>
             <div className="space-x-2 ml-auto flex ">
               <button
                 type="button"
-                className="bg-[#1e293b] hover:bg-gray-700 p-2 text-white text-lg font-semibold rounded-lg flex gap-3 justify-center items-center hidden lg:inline-flex"
+                className="bg-[#1e293b] hover:bg-gray-700 p-2 text-white text-lg font-semibold rounded-lg md:flex gap-3 justify-center items-center hidden lg:inline-flex"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -50,14 +50,14 @@ const Table = () => {
               </button>
             </div>
           </div>
-          <div className="">
+          <div>
             <ul className="flex gap-8  mt-6  py-5">
-              <li className="">
+              <li>
                 <a href="#" className=" text-white font-semibold active">
                   All
                 </a>
               </li>
-              <li className="">
+              <li>
                 <a
                   href="#"
                   className=" text-white hover:text-[#6741bf] font-semibold"
@@ -65,7 +65,7 @@ const Table = () => {
                   Succeeded
                 </a>
               </li>
-              <li className="">
+              <li>
                 <a
                   href="#"
                   className=" text-white hover:text-[#6741bf] font-semibold"
@@ -73,7 +73,7 @@ const Table = () => {
                   Uncaptured
                 </a>
               </li>
-              <li className=" ">
+              <li>
                 <a
                   href="#"
                   className=" text-white hover:text-[#6741bf] font-semibold"
@@ -163,18 +163,15 @@ const Table = () => {
         <div className=" overflow-auto">
           <table className=" w-full ">
             <thead className=" border-b border-gray-700">
-              <tr className="">
+              <tr>
                 <th className="px-8 text-sm text-white uppercase">
                   <div className="flex  items-center">
                     <input
                       className="appearance-none bg-gray-700 checked:bg-violet-700 hover:ring-0 rounded-sm"
                       type="checkbox"
-                      name=""
-                      id=""
+                      name="name1"
                     />
-                    <label className="px-6" htmlFor="">
-                      Handler
-                    </label>
+                    <label className="px-6">Handler</label>
                   </div>
                 </th>
                 <th className="p-3 text-sm text-left text-white uppercase">
@@ -204,8 +201,7 @@ const Table = () => {
                     <input
                       className="w-4 h-4 appearance-none  bg-gray-700 checked:bg-violet-700 hover:ring-0  rounded-sm  "
                       type="checkbox"
-                      name=""
-                      id=""
+                      name="name2"
                     />
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -222,10 +218,7 @@ const Table = () => {
                       />
                     </svg>
 
-                    <label
-                      className=" text-white font-bold text-lg whitespace-nowrap "
-                      htmlFor=""
-                    >
+                    <label className=" text-white font-bold text-lg whitespace-nowrap ">
                       Bought BTC
                     </label>
                   </div>
@@ -296,8 +289,7 @@ const Table = () => {
                     <input
                       className="w-4 h-4 appearance-none  bg-gray-700 checked:bg-violet-700 hover:ring-0  rounded-sm  "
                       type="checkbox"
-                      name=""
-                      id=""
+                      name="name3"
                     />
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -314,10 +306,7 @@ const Table = () => {
                       />
                     </svg>
 
-                    <label
-                      className=" text-white font-bold text-lg whitespace-nowrap "
-                      htmlFor=""
-                    >
+                    <label className=" text-white font-bold text-lg whitespace-nowrap ">
                       Sold ADA
                     </label>
                   </div>
@@ -388,8 +377,7 @@ const Table = () => {
                     <input
                       className="w-4 h-4 appearance-none  bg-gray-700 checked:bg-violet-700 hover:ring-0  rounded-sm  "
                       type="checkbox"
-                      name=""
-                      id=""
+                      name="name4"
                     />
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -406,10 +394,7 @@ const Table = () => {
                       />
                     </svg>
 
-                    <label
-                      className=" text-white font-bold text-lg whitespace-nowrap "
-                      htmlFor=""
-                    >
+                    <label className=" text-white font-bold text-lg whitespace-nowrap ">
                       Bought XRP
                     </label>
                   </div>
@@ -480,8 +465,7 @@ const Table = () => {
                     <input
                       className="w-4 h-4 appearance-none  bg-gray-700 checked:bg-violet-700 hover:ring-0  rounded-sm  "
                       type="checkbox"
-                      name=""
-                      id=""
+                      name="name5"
                     />
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -498,10 +482,7 @@ const Table = () => {
                       />
                     </svg>
 
-                    <label
-                      className=" text-white font-bold text-lg whitespace-nowrap "
-                      htmlFor=""
-                    >
+                    <label className=" text-white font-bold text-lg whitespace-nowrap ">
                       Robert Fox
                     </label>
                   </div>
@@ -572,8 +553,7 @@ const Table = () => {
                     <input
                       className="w-4 h-4 appearance-none  bg-gray-700 checked:bg-violet-700 hover:ring-0  rounded-sm  "
                       type="checkbox"
-                      name=""
-                      id=""
+                      name="name6"
                     />
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -590,10 +570,7 @@ const Table = () => {
                       />
                     </svg>
 
-                    <label
-                      className=" text-white font-bold text-lg whitespace-nowrap "
-                      htmlFor=""
-                    >
+                    <label className=" text-white font-bold text-lg whitespace-nowrap ">
                       Robert Fox
                     </label>
                   </div>
@@ -664,8 +641,7 @@ const Table = () => {
                     <input
                       className="w-4 h-4 appearance-none  bg-gray-700 checked:bg-violet-700 hover:ring-0  rounded-sm  "
                       type="checkbox"
-                      name=""
-                      id=""
+                      name="name7"
                     />
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -682,10 +658,7 @@ const Table = () => {
                       />
                     </svg>
 
-                    <label
-                      className=" text-white font-bold text-lg whitespace-nowrap "
-                      htmlFor=""
-                    >
+                    <label className=" text-white font-bold text-lg whitespace-nowrap ">
                       Robert Fox
                     </label>
                   </div>
@@ -756,8 +729,7 @@ const Table = () => {
                     <input
                       className="w-4 h-4 appearance-none  bg-gray-700 checked:bg-violet-700 hover:ring-0  rounded-sm  "
                       type="checkbox"
-                      name=""
-                      id=""
+                      name="name8"
                     />
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -774,10 +746,7 @@ const Table = () => {
                       />
                     </svg>
 
-                    <label
-                      className=" text-white font-bold text-lg whitespace-nowrap "
-                      htmlFor=""
-                    >
+                    <label className=" text-white font-bold text-lg whitespace-nowrap ">
                       Robert Fox
                     </label>
                   </div>
@@ -848,8 +817,7 @@ const Table = () => {
                     <input
                       className="w-4 h-4 appearance-none  bg-gray-700 checked:bg-violet-700 hover:ring-0  rounded-sm  "
                       type="checkbox"
-                      name=""
-                      id=""
+                      name="name9"
                     />
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -866,10 +834,7 @@ const Table = () => {
                       />
                     </svg>
 
-                    <label
-                      className=" text-white font-bold text-lg whitespace-nowrap "
-                      htmlFor=""
-                    >
+                    <label className=" text-white font-bold text-lg whitespace-nowrap ">
                       Robert Fox
                     </label>
                   </div>
@@ -940,8 +905,7 @@ const Table = () => {
                     <input
                       className="w-4 h-4 appearance-none  bg-gray-700 checked:bg-violet-700 hover:ring-0  rounded-sm  "
                       type="checkbox"
-                      name=""
-                      id=""
+                      name="name10"
                     />
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -958,10 +922,7 @@ const Table = () => {
                       />
                     </svg>
 
-                    <label
-                      className=" text-white font-bold text-lg whitespace-nowrap "
-                      htmlFor=""
-                    >
+                    <label className=" text-white font-bold text-lg whitespace-nowrap ">
                       Robert Fox
                     </label>
                   </div>
@@ -1032,8 +993,7 @@ const Table = () => {
                     <input
                       className="w-4 h-4 appearance-none  bg-gray-700 checked:bg-violet-700 hover:ring-0  rounded-sm  "
                       type="checkbox"
-                      name=""
-                      id=""
+                      name="name11"
                     />
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -1050,10 +1010,7 @@ const Table = () => {
                       />
                     </svg>
 
-                    <label
-                      className=" text-white font-bold text-lg whitespace-nowrap "
-                      htmlFor=""
-                    >
+                    <label className=" text-white font-bold text-lg whitespace-nowrap ">
                       Robert Fox
                     </label>
                   </div>
@@ -1124,8 +1081,7 @@ const Table = () => {
                     <input
                       className="w-4 h-4 appearance-none  bg-gray-700 checked:bg-violet-700 hover:ring-0  rounded-sm  "
                       type="checkbox"
-                      name=""
-                      id=""
+                      name="name12"
                     />
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -1142,10 +1098,7 @@ const Table = () => {
                       />
                     </svg>
 
-                    <label
-                      className=" text-white font-bold text-lg whitespace-nowrap "
-                      htmlFor=""
-                    >
+                    <label className=" text-white font-bold text-lg whitespace-nowrap ">
                       Robert Fox
                     </label>
                   </div>
@@ -1224,7 +1177,7 @@ const Table = () => {
               <nav>
                 <ul className=" flex gap-1">
                   <li className="border border-white py-2 px-4 text-white rounded-lg">
-                    <a className="" href="#">
+                    <a href="#">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -1242,32 +1195,22 @@ const Table = () => {
                     </a>
                   </li>
                   <li className="border border-white py-2 px-4 text-white rounded-lg">
-                    <a className="" href="#">
-                      1
-                    </a>
+                    <a href="#">1</a>
                   </li>
                   <li className="border border-white py-2 px-4 text-white rounded-lg">
-                    <a className="" href="#">
-                      2
-                    </a>
+                    <a href="#">2</a>
                   </li>
                   <li className="border border-white py-2 px-4 text-white rounded-lg">
-                    <a className="" href="#">
-                      3
-                    </a>
+                    <a href="#">3</a>
                   </li>
                   <li className="border border-white py-2 px-4 text-white rounded-lg">
-                    <a className="" href="#">
-                      4
-                    </a>
+                    <a href="#">4</a>
                   </li>
                   <li className="border border-white py-2 px-4 text-white rounded-lg">
-                    <a className="" href="#">
-                      5
-                    </a>
+                    <a href="#">5</a>
                   </li>
                   <li className="border border-white py-2 px-4 text-white rounded-lg">
-                    <a className="" href="#">
+                    <a href="#">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"

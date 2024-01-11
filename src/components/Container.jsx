@@ -1,9 +1,7 @@
-
 import React, { useState } from "react";
 import LeftDrawerContainer from "./LeftDrawerContainer";
 import TopDrawerContainer from "./TopDrawerContainer";
 import { Link } from "react-router-dom";
-
 
 const Container = ({ children }) => {
   const [draw, setDraw] = useState(true);
@@ -36,6 +34,7 @@ const Container = ({ children }) => {
                 </svg>
               </div>
               <input
+                name="search"
                 className=" text-white rounded-[50rem] bg-transparent border-none focus:outline-none focus:border-none w-[256px] py-[6px] ps-[40px]  pe-[14px] "
                 placeholder="Search"
                 type="text"
@@ -74,7 +73,10 @@ const Container = ({ children }) => {
         </div>
         <div className=" py-[8px] block lg:hidden ">
           <div className=" px-[16px] flex justify-between items-center ">
-            <div onClick={press} className=" lg:pointer-events-none nav px-[6px] py-[4px] ">
+            <div
+              onClick={press}
+              className=" lg:pointer-events-none nav px-[6px] py-[4px] "
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -90,7 +92,6 @@ const Container = ({ children }) => {
                 />
               </svg>
             </div>
-
 
             <div className=" py-[8px]  ">
               <img
@@ -132,14 +133,14 @@ const Container = ({ children }) => {
         <TopDrawerContainer draw={draw} />
 
         {/* second Middle  */}
-       {/* <LeftDrawerContainer/> */}
+        {/* <LeftDrawerContainer/> */}
 
-        <div  className={` ${draw ? "mt-[-550px]":"mt-0"} lg:mt-0 duration-500 relative z-40 lg:overflow-auto h-full lg:max-h-screen flex-grow lg:rounded-tl-[1rem] rounded-t-[1rem] borderColor `}>
-          <div className=" h-auto mb-[70px] ">
-            {children}
-          </div>
-
-
+        <div
+          className={` ${
+            draw ? "mt-[-590px]" : "mt-0"
+          } lg:mt-0 duration-500 relative z-40 lg:overflow-auto h-full lg:max-h-screen flex-grow lg:rounded-tl-[1rem] rounded-t-[1rem] borderColor `}
+        >
+          <div className=" h-auto mb-[70px] ">{children}</div>
         </div>
       </div>
     </div>

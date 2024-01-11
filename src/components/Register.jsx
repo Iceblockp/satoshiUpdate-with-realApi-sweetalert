@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   return (
@@ -19,20 +20,20 @@ const Register = () => {
 
           {/* free trail */}
           <div className=" text-slate-500 text-sm mt-4">
-            <span>Don't have an account?</span>
-            <a href="#" className=" px-1 font-normal  text-purple-500">
-              Sign up{" "}
+            <span>Already have an account?</span>
+            <div className=" inline px-1 font-normal  text-purple-500">
+              <Link to="/">Sign in </Link>
               <span className="text-slate-500 font-normal">
                 for a free trail.
               </span>
-            </a>
+            </div>
           </div>
         </div>
 
         {/* form */}
         <div className=" md:w-[469.5px] h-[282px] text-sm font-medium mb-32">
           {/* name */}
-          <div className=" flex justify-between gap-4 ">
+          <div className="flex justify-between gap-4 ">
             <div className="mb-5">
               <label className="" htmlFor="firstName">
                 First name
@@ -44,9 +45,7 @@ const Register = () => {
               />
             </div>
             <div className="mb-5">
-              <label className="" htmlFor="lastName">
-                Last name
-              </label>
+              <label htmlFor="lastName">Last name</label>
               <input
                 className=" mt-2 w-full rounded-lg border-1 border-slate-300 focus-visible:outline-none focus-visible:border-purple-500"
                 type="text"
@@ -56,9 +55,7 @@ const Register = () => {
           </div>
           {/* email */}
           <div className="mb-5">
-            <label className="" htmlFor="email">
-              Email Address
-            </label>
+            <label htmlFor="email">Email Address</label>
             <input
               className=" mt-2 w-full rounded-lg border-1 border-slate-300 focus-visible:outline-none focus-visible:border-purple-500"
               type="email"
@@ -68,7 +65,7 @@ const Register = () => {
           {/* password */}
           <div className=" mb-5">
             <div className=" flex justify-between">
-              <label htmlFor="">Password</label>
+              <label>Password</label>
             </div>
             <input
               className="  mt-2 w-full rounded-lg border-1 border-slate-300 focus-visible:outline-none focus-visible:border-purple-500"
@@ -78,9 +75,7 @@ const Register = () => {
           </div>
           {/* about us */}
           <div className=" mb-5">
-            <label htmlFor="" className=" block">
-              How did you hear about us?
-            </label>
+            <label className=" block">How did you hear about us?</label>
             <select
               name=""
               id=""
@@ -93,11 +88,10 @@ const Register = () => {
             </select>
           </div>
           {/* button */}
-          <div className=" mb-5 w-full bg-black text-white text-center items-center py-3 rounded-md font-medium text-[16px] hover:bg-slate-700">
-            <a className="" href="#">
-              Sign in
-            </a>
-          </div>
+          
+              <Link to="/"><div className=" mb-5 w-full bg-black text-white text-center items-center py-3 rounded-md font-medium text-[16px] hover:bg-slate-700">
+            Sign up
+            </div></Link>
         </div>
 
         {/* or */}
