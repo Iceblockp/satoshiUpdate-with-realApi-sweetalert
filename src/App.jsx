@@ -1,47 +1,28 @@
-
 import React from "react";
-import Container from "./components/Container";
-import Dashboard from "./components/Dashboard";
-import { Routes, Route } from 'react-router-dom'
-import Login from "./components/Login";
-import Register from "./components/Register";
-import CreateForm from "./components/CreateForm";
-import Table from './components/Table'
-
-
-
-
-
-
+import { Routes, Route } from "react-router-dom";
+import {
+  ContainerDashboard,
+  CreateForm,
+  Dashboard,
+  LoginPage,
+  RegisterPage,
+  TablePage,
+} from "./page";
+import NotFound from "./NotFound";
 
 const App = () => {
   return (
-    
-    
-    
-    
     <Routes>
+      <Route path="/" element={<LoginPage />} />
 
-      <Route path='/' element={
-        <Login />
-              } ></Route>
-
-        
-
-
-        <Route path='dashboard' element={
-        <Container><Dashboard /></Container>} ></Route>
-        <Route path='createForm' element={
-        
-        <Container><CreateForm /></Container>} ></Route>
-  
-        
-        <Route path='register' element={<Register />} ></Route>
-        <Route path='table' element={<Container><Table /></Container>} ></Route>
-
-   
-      </Routes>
-
+      <Route path="/dashboard" element={<ContainerDashboard/>}>
+        <Route index element={<Dashboard />}/>
+        <Route path="createForm" element={<CreateForm />}/>
+        <Route path="table" element={<TablePage />}/>
+      </Route>
+      <Route path="register" element={<RegisterPage />}></Route>
+      <Route path="*" element={<NotFound/>} />
+    </Routes>
   );
 };
 

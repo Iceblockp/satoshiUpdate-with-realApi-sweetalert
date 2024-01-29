@@ -1,19 +1,31 @@
-import React, { useState } from "react";
-import LeftDrawerContainer from "./LeftDrawerContainer";
-import TopDrawerContainer from "./TopDrawerContainer";
-import { Link } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { Link ,Outlet,useNavigate} from "react-router-dom";
+import { TopDrawerContainer } from "../components";
+import { dataContext } from "../store/ContextProvider";
 
-const Container = ({ children }) => {
-  const [draw, setDraw] = useState(true);
+const Container = () => {
   const [ae,setAe] = useState(false);
+  const {loginData,addLoginData} = useContext(dataContext);
+  const nav = useNavigate();
+
+  const {draw ,press} = useContext(dataContext);
 
   const aehandle = () => {
     setAe(!ae)
   }
+  useEffect(() => {
+    if(!loginData){
+      nav("/");
+    }
+  },[])
 
-  const press = () => {
-    setDraw(!draw);
-  };
+  const handleLogout = () => {
+    addLoginData(null);
+    nav("/")
+
+  }
+
+  
 
   return (
     <div className="bg-[rgb(23,32,51)] min-h-screen">
@@ -175,14 +187,14 @@ const Container = ({ children }) => {
                     <span>Share</span>
                   </div>
                   <hr />
-                  <div className=" hover:bg-gray-100 mt-auto px-[16px] py-[8px] flex items-center ">
+                  <div  onClick={handleLogout} className=" hover:bg-gray-100 mt-auto px-[16px] py-[8px] flex items-center ">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
                       strokeWidth={1.5}
                       stroke="currentColor"
-                      className="w-4 h-4 mr-[12px]"
+                      className="w-4 h-4 mr-[12px] pointer-events-none"
                     >
                       <path
                         strokeLinecap="round"
@@ -190,7 +202,7 @@ const Container = ({ children }) => {
                         d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
                       />
                     </svg>
-                    <span><Link to="/">Logout</Link></span>
+                    <button className=" pointer-events-none" >Logout!</button>
                   </div>
                 </div>
               </div>
@@ -354,7 +366,7 @@ const Container = ({ children }) => {
                     <span>Share</span>
                   </div>
                   <hr />
-                  <div className=" hover:bg-gray-100 mt-auto px-[16px] py-[8px] flex items-center ">
+                  <div onClick={handleLogout} className=" hover:bg-gray-100 mt-auto px-[16px] py-[8px] flex items-center ">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -369,7 +381,7 @@ const Container = ({ children }) => {
                         d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
                       />
                     </svg>
-                    <span><Link to="/">Logout</Link></span>
+                    <span className=" cursor-pointer">Logout</span>
                   </div>
                 </div>
               </div>
@@ -377,17 +389,16 @@ const Container = ({ children }) => {
           </div>
         </div>
         {/* midde  */}
-        <TopDrawerContainer draw={draw} />
+        <TopDrawerContainer draw={draw} press={press} />
 
-        {/* second Middle  */}
-        {/* <LeftDrawerContainer/> */}
+       
 
         <div
           className={` ${
             draw ? "mt-[-590px]" : "mt-0"
           } lg:mt-0 duration-500 relative z-40 lg:overflow-auto h-full lg:max-h-screen flex-grow lg:rounded-tl-[1rem] rounded-t-[1rem] borderColor `}
         >
-          <div className=" h-auto mb-[70px] ">{children}</div>
+          <div className=" h-auto mb-[70px] "><Outlet/></div>
         </div>
       </div>
     </div>

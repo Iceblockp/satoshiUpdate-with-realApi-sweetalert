@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import AccordionDash from "./AccordionDash";
 
-const TopDrawerContainer = ({ draw }) => {
+const TopDrawerContainer = ({ draw ,press}) => {
     const [dashOpen,setDashOpen] = useState(false);
     const [pageOpen, setPageOpen] = useState(false);
     const [accountOpen,setAccountOpen] = useState(false);
@@ -99,7 +99,7 @@ const TopDrawerContainer = ({ draw }) => {
                     link: "/dashboard",
                   }
                  
-                ]} open={dashOpen}
+                ]} open={dashOpen} 
               />
             </li>
             {/* Pages  */}
@@ -141,12 +141,12 @@ const TopDrawerContainer = ({ draw }) => {
                 {
                   id: 1,
                   name: "Table Listing",
-                  link: "/table",
+                  link: "/dashboard/table",
                 },
                 {
                   id: 2,
                   name: "Create Form",
-                  link: "/createForm",
+                  link: "/dashboard/createForm",
                 }
               ]} open={pageOpen}
                />

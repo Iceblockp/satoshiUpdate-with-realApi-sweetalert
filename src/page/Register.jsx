@@ -1,7 +1,19 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link,useNavigate } from "react-router-dom";
+import { dataContext } from "../store/ContextProvider";
 
 const Register = () => {
+  const {addRegisterData} = useContext(dataContext);
+ const [data,setData] = useState({email:"",password:""});
+ const nav = useNavigate();
+
+  const registerHandle = (e) => {
+    e.preventDefault();
+    addRegisterData(data);
+    nav("/")
+  }
+
+
   return (
     <div className=" bg-white flex h-full">
       <div className="mx-auto px-10 md:px-0 py-10">
@@ -31,7 +43,7 @@ const Register = () => {
         </div>
 
         {/* form */}
-        <div className=" md:w-[469.5px] h-[282px] text-sm font-medium mb-32">
+        <form onSubmit={registerHandle} className=" md:w-[469.5px] h-[282px] text-sm font-medium mb-32">
           {/* name */}
           <div className="flex justify-between gap-4 ">
             <div className="mb-5">
@@ -57,9 +69,13 @@ const Register = () => {
           <div className="mb-5">
             <label htmlFor="email">Email Address</label>
             <input
+            value={data.email}
+            onChange={(e) => setData((pre) => ({...pre,email:e.target.value}))}
+            name="email"
               className=" mt-2 w-full rounded-lg border-1 border-slate-300 focus-visible:outline-none focus-visible:border-purple-500"
               type="email"
               id="email"
+              required
             />
           </div>
           {/* password */}
@@ -68,9 +84,13 @@ const Register = () => {
               <label>Password</label>
             </div>
             <input
+            name="password"
+            value={data.password}
+            onChange={(e) => setData((pre) => ({...pre,password:e.target.value}))}
               className="  mt-2 w-full rounded-lg border-1 border-slate-300 focus-visible:outline-none focus-visible:border-purple-500"
               type="password"
               id="password"
+              required
             />
           </div>
           {/* about us */}
@@ -89,10 +109,10 @@ const Register = () => {
           </div>
           {/* button */}
           
-              <Link to="/"><div className=" mb-5 w-full bg-black text-white text-center items-center py-3 rounded-md font-medium text-[16px] hover:bg-slate-700">
+              <button type="submit" className=" mb-5 w-full bg-black text-white text-center items-center py-3 rounded-md font-medium text-[16px] hover:bg-slate-700">
             Sign up
-            </div></Link>
-        </div>
+            </button>
+        </form>
 
         {/* or */}
         <div className=" py-5 text-center">
