@@ -22,10 +22,12 @@ const Login = () => {
       alert("Wrong Password");
     }
 
-    nav("/dashboard")
+if(checkedEmail && checkedPassword){
 
+  nav("/dashboard")
 
-    addLoginData(data);
+  addLoginData(data);
+}
 
   }
 
@@ -101,13 +103,9 @@ const Login = () => {
           {/* checkbox */}
           <div className=" mb-5">
             <div className="flex gap-2 text-center items-center">
-              <input
-                className="rounded-sm border-1 border-slate-300 outline-slate-300 checked:outline-purple-500 checked:bg-purple-500"
-                type="checkbox"
-                id="checkbox"
-              />
-              <label className=" font-medium" htmlFor="checkbox">
-                Keep me logged in
+             
+              <label className=" font-medium" >
+                Don't have account yet? <Link to="/register"><span className=" text-blue-600">Register First</span></Link>
               </label>
             </div>
           </div>
