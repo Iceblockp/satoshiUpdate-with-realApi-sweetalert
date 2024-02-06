@@ -19,7 +19,7 @@ const Container = () => {
     localStorage.removeItem("auth");
     nav("/")
     if(!localStorage.getItem("auth")){
-      SuccessRegister("LouOut Successfully");
+      SuccessRegister("LogOut Successfully");
     }
 
   }
