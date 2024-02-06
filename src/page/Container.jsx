@@ -2,10 +2,10 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link ,Outlet,useNavigate} from "react-router-dom";
 import { TopDrawerContainer } from "../components";
 import { dataContext } from "../store/ContextProvider";
+import { SuccessRegister } from "../service/notify.service";
 
 const Container = () => {
   const [ae,setAe] = useState(false);
-  const {loginData,addLoginData} = useContext(dataContext);
   const nav = useNavigate();
 
   const {draw ,press} = useContext(dataContext);
@@ -13,17 +13,23 @@ const Container = () => {
   const aehandle = () => {
     setAe(!ae)
   }
-  useEffect(() => {
-    if(!loginData){
-      nav("/");
-    }
-  },[])
+ 
 
   const handleLogout = () => {
-    addLoginData(null);
+    localStorage.removeItem("auth");
     nav("/")
+    if(!localStorage.getItem("auth")){
+      SuccessRegister("LouOut Successfully");
+    }
 
   }
+
+  useEffect(() => {
+    const loginDone = localStorage.getItem("auth");
+    if(!loginDone){
+      nav("/")
+    }
+  },[])
 
   
 
