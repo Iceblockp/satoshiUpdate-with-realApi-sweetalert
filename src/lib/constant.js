@@ -1,3 +1,3 @@
-export const API_ENDPOINT = "https://contact-app.mmsdev.site/api/v1";
+export const API_ENDPOINT = " https://contact.sankyitar.store/api/v1";
 
 
