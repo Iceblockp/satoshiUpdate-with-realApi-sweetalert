@@ -24,12 +24,12 @@ const Container = () => {
 
   }
 
-  useEffect(() => {
-    const loginDone = localStorage.getItem("auth");
-    if(!loginDone){
-      nav("/")
-    }
-  },[])
+  // useEffect(() => {
+  //   const loginDone = localStorage.getItem("auth");
+  //   if(!loginDone){
+  //     nav("/")
+  //   }
+  // },[])
 
   
 

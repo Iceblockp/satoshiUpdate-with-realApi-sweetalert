@@ -19,16 +19,17 @@ const Login = () => {
   const loginBtnHandler = (e) => {
     e.preventDefault();
     handleDealApi(loginData);
+    nav("/dashboard");
 
 
   }
 
-  useEffect(() => {
-    const loginDone = localStorage.getItem("auth");
-    if(daTa?.success || loginDone){
-      nav("/dashboard")
-    }
-  },[daTa])
+  // useEffect(() => {
+  //   const loginDone = localStorage.getItem("auth");
+  //   if(daTa?.success || loginDone){
+  //     nav("/dashboard")
+  //   }
+  // },[daTa])
 
 
   return (
